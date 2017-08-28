@@ -32,7 +32,12 @@ Ext.define('NastedJsonBind.view.main.SupplierItemsOneGrid', {
                 //autoLoad: true,
                 title: 'Orders',
                 pluginWidget:true,
-                store : Ext.create(Ext.data.Store),
+
+                //Alternative way to create default store
+                //store : Ext.create(Ext.data.Store),
+                store : {
+                    type: 'store'
+                },
 
                 bind: {
                     store: '{record.items}',
